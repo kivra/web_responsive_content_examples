@@ -1,0 +1,30 @@
+.salary {
+  border-radius: $border-radius--medium;
+  background: #edf9e1;
+  padding: pxToRem(24) pxToRem(24) pxToRem(32);
+  margin-bottom: pxToRem(40);
+  text-align: center;
+
+  @include small {
+    padding-bottom: pxToRem(28);
+  }
+}
+
+.salary__date {
+  font-size: pxToRem(14);
+  line-height: pxToRem(19);
+  color: $color--text--subtle;
+}
+
+.salary__salary {
+  font-family: $font-family--title;
+  font-weight: $font-weight--bold;
+  font-size: pxToRem(40);
+  line-height: pxToRem(44);
+  margin: 0;
+
+  @include small {
+    font-size: pxToRem(24);
+    line-height: pxToRem(30);
+  }
+}

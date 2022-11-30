@@ -1,0 +1,15 @@
+.heading-group {
+  > * {
+    margin: 0;
+  }
+
+  > *:first-child {
+    font-family: $font-family--title--secondary;
+    font-weight: $font-weight--bold;
+    color: $color--text--highlight;
+  }
+
+  + p {
+    margin-top: 0.5rem;
+  }
+}

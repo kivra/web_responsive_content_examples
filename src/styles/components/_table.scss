@@ -1,0 +1,32 @@
+.table {
+  width: 100%;
+  margin: pxToRem(16) 0;
+  border-spacing: 0;
+}
+
+.table-row:first-child .table-cell {
+  border-top: 1px $color--border--subtle solid;
+}
+
+tbody .table-cell {
+  border-bottom: 1px $color--border--subtle solid;
+}
+
+.table-cell {
+  vertical-align: top;
+  padding: pxToRem(12) 0;
+}
+
+.table-cell__highlight {
+  font-weight: $font-weight--semibold;
+}
+
+.table-cell__subtle {
+  color: $color--text--subtle;
+  font-size: pxToRem(14);
+  line-height: pxToRem(19);
+}
+
+.table-cell__last {
+  text-align: right;
+}

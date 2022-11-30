@@ -1,0 +1,30 @@
+.salary-header {
+  font-weight: $font-weight--bold;
+  text-align: center;
+  padding-bottom: 0;
+}
+
+.salary-header__pretitle {
+  font-family: $font-family--title;
+  font-weight: $font-weight--bold;
+  font-size: pxToRem(24);
+  line-height: pxToRem(30);
+}
+
+.salary-header__title {
+  font-family: $font-family--base;
+  font-size: 1rem;
+}
+
+.salary-header__company-logo {
+  margin-right: pxToRem(4);
+  width: pxToRem(20);
+  height: auto;
+}
+
+.salary-header__company-name {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: $font-weight--regular;
+}

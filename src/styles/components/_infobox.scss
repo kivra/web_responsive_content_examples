@@ -1,0 +1,10 @@
+.infobox {
+  width: 100%;
+  border-radius: $border-radius--medium;
+  background: #f1f4ff;
+  padding: pxToRem(16);
+}
+
+.infobox__heading {
+  color: $color--text--highlight;
+}

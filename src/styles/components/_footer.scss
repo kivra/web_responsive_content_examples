@@ -1,0 +1,26 @@
+.footer {
+  margin-top: pxToRem(40);
+  background: #fff6d7;
+  overflow: hidden;
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+}
+
+.footer__inner {
+  position: relative;
+}
+
+.footer__logo {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: pxToRem(72px);
+  height: auto;
+
+  @include small {
+    width: pxToRem(56px);
+  }
+}

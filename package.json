@@ -1,0 +1,22 @@
+{
+  "name": "web_responsive_content_examples",
+  "version": "0.0.1",
+  "private": true,
+  "description": "Basic example templates of what you can accomplish when sending sending responsive content in Kivra.",
+  "scripts": {
+    "start": "parcel src/templates/*.html",
+    "build": "rm -rf dist/*.{js,map,css,html} && parcel build --no-optimize src/templates/*.html",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.8.0",
+    "normalize.css": "^8.0.1",
+    "parcel": "^2.8.0",
+    "posthtml-expressions": "^1.10.0",
+    "posthtml-extend": "^0.6.3",
+    "prettier": "^2.8.0"
+  },
+  "volta": {
+    "node": "18.12.1"
+  }
+}

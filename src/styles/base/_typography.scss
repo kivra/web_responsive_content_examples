@@ -1,0 +1,43 @@
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: $font-family--base;
+  font-weight: $font-weight--regular;
+  line-height: pxToRem(24);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 1em 0 0;
+
+  &:first-child {
+    margin-top: 0;
+  }
+}
+
+p {
+  margin: 0;
+
+  + p {
+    margin-top: 1em;
+  }
+}
+
+h1,
+h2 {
+  font-family: $font-family--title;
+  font-size: pxToRem(24);
+  line-height: pxToRem(30);
+
+  @include small {
+    font-size: pxToRem(20);
+    line-height: pxToRem(26);
+  }
+}

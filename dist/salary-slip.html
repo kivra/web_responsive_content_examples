@@ -1,0 +1,1086 @@
+<!DOCTYPE html>
+<html lang="sv" tabindex="0"> <!-- setting tabindex explicitly to enable :hover on iOS -->
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
+    <title>Salary Slip</title>
+    <style>html {
+  -webkit-text-size-adjust: 100%;
+  line-height: 1.15;
+}
+
+body {
+  margin: 0;
+}
+
+main {
+  display: block;
+}
+
+h1 {
+  margin: .67em 0;
+  font-size: 2em;
+}
+
+hr {
+  box-sizing: content-box;
+  height: 0;
+  overflow: visible;
+}
+
+pre {
+  font-family: monospace;
+  font-size: 1em;
+}
+
+a {
+  background-color: #0000;
+}
+
+abbr[title] {
+  border-bottom: none;
+  text-decoration: underline dotted;
+}
+
+b, strong {
+  font-weight: bolder;
+}
+
+code, kbd, samp {
+  font-family: monospace;
+  font-size: 1em;
+}
+
+small {
+  font-size: 80%;
+}
+
+sub, sup {
+  vertical-align: baseline;
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+}
+
+sub {
+  bottom: -.25em;
+}
+
+sup {
+  top: -.5em;
+}
+
+img {
+  border-style: none;
+}
+
+button, input, optgroup, select, textarea {
+  margin: 0;
+  font-family: inherit;
+  font-size: 100%;
+  line-height: 1.15;
+}
+
+button, input {
+  overflow: visible;
+}
+
+button, select {
+  text-transform: none;
+}
+
+button, [type="button"], [type="reset"], [type="submit"] {
+  -webkit-appearance: button;
+}
+
+button::-moz-focus-inner, [type="button"]::-moz-focus-inner, [type="reset"]::-moz-focus-inner, [type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+button:-moz-focusring, [type="button"]:-moz-focusring, [type="reset"]:-moz-focusring, [type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+fieldset {
+  padding: .35em .75em .625em;
+}
+
+legend {
+  box-sizing: border-box;
+  color: inherit;
+  max-width: 100%;
+  white-space: normal;
+  padding: 0;
+  display: table;
+}
+
+progress {
+  vertical-align: baseline;
+}
+
+textarea {
+  overflow: auto;
+}
+
+[type="checkbox"], [type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+[type="number"]::-webkit-inner-spin-button, [type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+[type="search"] {
+  -webkit-appearance: textfield;
+  outline-offset: -2px;
+}
+
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  font: inherit;
+}
+
+details {
+  display: block;
+}
+
+summary {
+  display: list-item;
+}
+
+template, [hidden] {
+  display: none;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  font-family: sans-serif;
+  font-weight: 400;
+  line-height: 1.5rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 1em 0 0;
+}
+
+h1:first-child, h2:first-child, h3:first-child, h4:first-child, h5:first-child, h6:first-child {
+  margin-top: 0;
+}
+
+p {
+  margin: 0;
+}
+
+p + p {
+  margin-top: 1em;
+}
+
+h1, h2 {
+  font-family: Roboto Slab;
+  font-size: 1.5rem;
+  line-height: 1.875rem;
+}
+
+@media only screen and (max-width: 959px) {
+  h1, h2 {
+    font-size: 1.25rem;
+    line-height: 1.625rem;
+  }
+}
+
+.container {
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1.75rem 1.5rem;
+}
+
+@media only screen and (max-width: 959px) {
+  .container {
+    padding: 1.375rem .625rem;
+  }
+}
+
+.grid-row {
+  flex-wrap: wrap;
+  margin-top: 2.5rem;
+  display: flex;
+}
+
+.grid-col--flex {
+  display: flex;
+}
+
+.grid-col--flex-vcenter {
+  flex-direction: column;
+  justify-content: center;
+  display: flex;
+}
+
+.grid-col-1 {
+  width: 8.33333%;
+  padding-left: .75rem;
+  padding-right: .75rem;
+}
+
+.grid-col-1:first-child {
+  padding-left: 0;
+}
+
+.grid-col-1:last-child {
+  padding-right: 0;
+}
+
+.grid-col-2 {
+  width: 16.6667%;
+  padding-left: .75rem;
+  padding-right: .75rem;
+}
+
+.grid-col-2:first-child {
+  padding-left: 0;
+}
+
+.grid-col-2:last-child {
+  padding-right: 0;
+}
+
+.grid-col-3 {
+  width: 25%;
+  padding-left: .75rem;
+  padding-right: .75rem;
+}
+
+.grid-col-3:first-child {
+  padding-left: 0;
+}
+
+.grid-col-3:last-child {
+  padding-right: 0;
+}
+
+.grid-col-4 {
+  width: 33.3333%;
+  padding-left: .75rem;
+  padding-right: .75rem;
+}
+
+.grid-col-4:first-child {
+  padding-left: 0;
+}
+
+.grid-col-4:last-child {
+  padding-right: 0;
+}
+
+.grid-col-5 {
+  width: 41.6667%;
+  padding-left: .75rem;
+  padding-right: .75rem;
+}
+
+.grid-col-5:first-child {
+  padding-left: 0;
+}
+
+.grid-col-5:last-child {
+  padding-right: 0;
+}
+
+.grid-col-6 {
+  width: 50%;
+  padding-left: .75rem;
+  padding-right: .75rem;
+}
+
+.grid-col-6:first-child {
+  padding-left: 0;
+}
+
+.grid-col-6:last-child {
+  padding-right: 0;
+}
+
+.grid-col-7 {
+  width: 58.3333%;
+  padding-left: .75rem;
+  padding-right: .75rem;
+}
+
+.grid-col-7:first-child {
+  padding-left: 0;
+}
+
+.grid-col-7:last-child {
+  padding-right: 0;
+}
+
+.grid-col-8 {
+  width: 66.6667%;
+  padding-left: .75rem;
+  padding-right: .75rem;
+}
+
+.grid-col-8:first-child {
+  padding-left: 0;
+}
+
+.grid-col-8:last-child {
+  padding-right: 0;
+}
+
+.grid-col-9 {
+  width: 75%;
+  padding-left: .75rem;
+  padding-right: .75rem;
+}
+
+.grid-col-9:first-child {
+  padding-left: 0;
+}
+
+.grid-col-9:last-child {
+  padding-right: 0;
+}
+
+.grid-col-10 {
+  width: 83.3333%;
+  padding-left: .75rem;
+  padding-right: .75rem;
+}
+
+.grid-col-10:first-child {
+  padding-left: 0;
+}
+
+.grid-col-10:last-child {
+  padding-right: 0;
+}
+
+.grid-col-11 {
+  width: 91.6667%;
+  padding-left: .75rem;
+  padding-right: .75rem;
+}
+
+.grid-col-11:first-child {
+  padding-left: 0;
+}
+
+.grid-col-11:last-child {
+  padding-right: 0;
+}
+
+.grid-col-12 {
+  width: 100%;
+  padding: .75rem 0;
+}
+
+.grid-col-12:first-child {
+  padding-top: 0;
+}
+
+.grid-col-12:last-child {
+  padding-bottom: 0;
+}
+
+@media only screen and (max-width: 1279px) {
+  .grid-col-m-1 {
+    width: 8.33333%;
+    padding-left: .75rem;
+    padding-right: .75rem;
+  }
+
+  .grid-col-m-1:first-child {
+    padding-left: 0;
+  }
+
+  .grid-col-m-1:last-child {
+    padding-right: 0;
+  }
+
+  .grid-col-m-2 {
+    width: 16.6667%;
+    padding-left: .75rem;
+    padding-right: .75rem;
+  }
+
+  .grid-col-m-2:first-child {
+    padding-left: 0;
+  }
+
+  .grid-col-m-2:last-child {
+    padding-right: 0;
+  }
+
+  .grid-col-m-3 {
+    width: 25%;
+    padding-left: .75rem;
+    padding-right: .75rem;
+  }
+
+  .grid-col-m-3:first-child {
+    padding-left: 0;
+  }
+
+  .grid-col-m-3:last-child {
+    padding-right: 0;
+  }
+
+  .grid-col-m-4 {
+    width: 33.3333%;
+    padding-left: .75rem;
+    padding-right: .75rem;
+  }
+
+  .grid-col-m-4:first-child {
+    padding-left: 0;
+  }
+
+  .grid-col-m-4:last-child {
+    padding-right: 0;
+  }
+
+  .grid-col-m-5 {
+    width: 41.6667%;
+    padding-left: .75rem;
+    padding-right: .75rem;
+  }
+
+  .grid-col-m-5:first-child {
+    padding-left: 0;
+  }
+
+  .grid-col-m-5:last-child {
+    padding-right: 0;
+  }
+
+  .grid-col-m-6 {
+    width: 50%;
+    padding-left: .75rem;
+    padding-right: .75rem;
+  }
+
+  .grid-col-m-6:first-child {
+    padding-left: 0;
+  }
+
+  .grid-col-m-6:last-child {
+    padding-right: 0;
+  }
+
+  .grid-col-m-7 {
+    width: 58.3333%;
+    padding-left: .75rem;
+    padding-right: .75rem;
+  }
+
+  .grid-col-m-7:first-child {
+    padding-left: 0;
+  }
+
+  .grid-col-m-7:last-child {
+    padding-right: 0;
+  }
+
+  .grid-col-m-8 {
+    width: 66.6667%;
+    padding-left: .75rem;
+    padding-right: .75rem;
+  }
+
+  .grid-col-m-8:first-child {
+    padding-left: 0;
+  }
+
+  .grid-col-m-8:last-child {
+    padding-right: 0;
+  }
+
+  .grid-col-m-9 {
+    width: 75%;
+    padding-left: .75rem;
+    padding-right: .75rem;
+  }
+
+  .grid-col-m-9:first-child {
+    padding-left: 0;
+  }
+
+  .grid-col-m-9:last-child {
+    padding-right: 0;
+  }
+
+  .grid-col-m-10 {
+    width: 83.3333%;
+    padding-left: .75rem;
+    padding-right: .75rem;
+  }
+
+  .grid-col-m-10:first-child {
+    padding-left: 0;
+  }
+
+  .grid-col-m-10:last-child {
+    padding-right: 0;
+  }
+
+  .grid-col-m-11 {
+    width: 91.6667%;
+    padding-left: .75rem;
+    padding-right: .75rem;
+  }
+
+  .grid-col-m-11:first-child {
+    padding-left: 0;
+  }
+
+  .grid-col-m-11:last-child {
+    padding-right: 0;
+  }
+
+  .grid-col-m-12 {
+    width: 100%;
+    padding: .75rem 0;
+  }
+
+  .grid-col-m-12:first-child {
+    padding-top: 0;
+  }
+
+  .grid-col-m-12:last-child {
+    padding-bottom: 0;
+  }
+}
+
+@media only screen and (max-width: 959px) {
+  .grid-col-s-1 {
+    width: 8.33333%;
+    padding-left: .75rem;
+    padding-right: .75rem;
+  }
+
+  .grid-col-s-1:first-child {
+    padding-left: 0;
+  }
+
+  .grid-col-s-1:last-child {
+    padding-right: 0;
+  }
+
+  .grid-col-s-2 {
+    width: 16.6667%;
+    padding-left: .75rem;
+    padding-right: .75rem;
+  }
+
+  .grid-col-s-2:first-child {
+    padding-left: 0;
+  }
+
+  .grid-col-s-2:last-child {
+    padding-right: 0;
+  }
+
+  .grid-col-s-3 {
+    width: 25%;
+    padding-left: .75rem;
+    padding-right: .75rem;
+  }
+
+  .grid-col-s-3:first-child {
+    padding-left: 0;
+  }
+
+  .grid-col-s-3:last-child {
+    padding-right: 0;
+  }
+
+  .grid-col-s-4 {
+    width: 33.3333%;
+    padding-left: .75rem;
+    padding-right: .75rem;
+  }
+
+  .grid-col-s-4:first-child {
+    padding-left: 0;
+  }
+
+  .grid-col-s-4:last-child {
+    padding-right: 0;
+  }
+
+  .grid-col-s-5 {
+    width: 41.6667%;
+    padding-left: .75rem;
+    padding-right: .75rem;
+  }
+
+  .grid-col-s-5:first-child {
+    padding-left: 0;
+  }
+
+  .grid-col-s-5:last-child {
+    padding-right: 0;
+  }
+
+  .grid-col-s-6 {
+    width: 50%;
+    padding-left: .75rem;
+    padding-right: .75rem;
+  }
+
+  .grid-col-s-6:first-child {
+    padding-left: 0;
+  }
+
+  .grid-col-s-6:last-child {
+    padding-right: 0;
+  }
+
+  .grid-col-s-7 {
+    width: 58.3333%;
+    padding-left: .75rem;
+    padding-right: .75rem;
+  }
+
+  .grid-col-s-7:first-child {
+    padding-left: 0;
+  }
+
+  .grid-col-s-7:last-child {
+    padding-right: 0;
+  }
+
+  .grid-col-s-8 {
+    width: 66.6667%;
+    padding-left: .75rem;
+    padding-right: .75rem;
+  }
+
+  .grid-col-s-8:first-child {
+    padding-left: 0;
+  }
+
+  .grid-col-s-8:last-child {
+    padding-right: 0;
+  }
+
+  .grid-col-s-9 {
+    width: 75%;
+    padding-left: .75rem;
+    padding-right: .75rem;
+  }
+
+  .grid-col-s-9:first-child {
+    padding-left: 0;
+  }
+
+  .grid-col-s-9:last-child {
+    padding-right: 0;
+  }
+
+  .grid-col-s-10 {
+    width: 83.3333%;
+    padding-left: .75rem;
+    padding-right: .75rem;
+  }
+
+  .grid-col-s-10:first-child {
+    padding-left: 0;
+  }
+
+  .grid-col-s-10:last-child {
+    padding-right: 0;
+  }
+
+  .grid-col-s-11 {
+    width: 91.6667%;
+    padding-left: .75rem;
+    padding-right: .75rem;
+  }
+
+  .grid-col-s-11:first-child {
+    padding-left: 0;
+  }
+
+  .grid-col-s-11:last-child {
+    padding-right: 0;
+  }
+
+  .grid-col-s-12 {
+    width: 100%;
+    padding: .75rem 0;
+  }
+
+  .grid-col-s-12:first-child {
+    padding-top: 0;
+  }
+
+  .grid-col-s-12:last-child {
+    padding-bottom: 0;
+  }
+}
+
+.heading-with-detail__heading {
+  margin: 0;
+}
+
+.heading-with-detail__detail {
+  color: #937e8a;
+  margin: .25rem 0 0;
+}
+
+.heading-group > * {
+  margin: 0;
+}
+
+.heading-group > :first-child {
+  color: #3b0aaf;
+  font-family: Kalam;
+  font-weight: 700;
+}
+
+.heading-group + p {
+  margin-top: .5rem;
+}
+
+.table {
+  width: 100%;
+  border-spacing: 0;
+  margin: 1rem 0;
+}
+
+.table-row:first-child .table-cell {
+  border-top: 1px solid #eeebe8;
+}
+
+tbody .table-cell {
+  border-bottom: 1px solid #eeebe8;
+}
+
+.table-cell {
+  vertical-align: top;
+  padding: .75rem 0;
+}
+
+.table-cell__highlight {
+  font-weight: 600;
+}
+
+.table-cell__subtle {
+  color: #937e8a;
+  font-size: .875rem;
+  line-height: 1.1875rem;
+}
+
+.table-cell__last {
+  text-align: right;
+}
+
+.link {
+  color: #3b0aaf;
+  text-decoration: none;
+}
+
+.link--external {
+  font-weight: 700;
+}
+
+.link--external:after {
+  vertical-align: top;
+  height: 1rem;
+  width: 1rem;
+  content: "";
+  background: url("data:image/svg+xml;utf8,<svg width=\"16\" height=\"16\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><g clip-path=\"url(%23a)\" stroke=\"%233b0aaf\" stroke-miterlimit=\"10\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"m15.5.5-8 8m1-8h7v7m-3 2v5a1 1 0 0 1-1 1h-10a1 1 0 0 1-1-1v-10a1 1 0 0 1 1-1h5\"/></g><defs><clipPath id=\"a\"><path fill=\"%23fff\" d=\"M0 0h16v16H0z\"/></clipPath></defs></svg>");
+  margin: .1rem 0 0 .5rem;
+  display: inline-block;
+}
+
+.infobox {
+  width: 100%;
+  background: #f1f4ff;
+  border-radius: 8px;
+  padding: 1rem;
+}
+
+.infobox__heading {
+  color: #3b0aaf;
+}
+
+.footer {
+  background: #fff6d7;
+  margin-top: 2.5rem;
+  overflow: hidden;
+}
+
+.footer a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.footer__inner {
+  position: relative;
+}
+
+.footer__logo {
+  width: 4.5rem;
+  height: auto;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+@media only screen and (max-width: 959px) {
+  .footer__logo {
+    width: 3.5rem;
+  }
+}
+
+[data-tooltip] {
+  position: relative;
+}
+
+[data-tooltip].tooltip--inline {
+  display: inline-block;
+}
+
+[data-tooltip]:before {
+  max-width: 100%;
+  color: #fff;
+  content: attr(data-tooltip);
+  background-color: #12100dd9;
+  border-radius: 8px;
+  padding: .5rem;
+  font-size: 1rem;
+  font-weight: 400;
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+}
+
+[data-tooltip]:hover:before {
+  display: block;
+}
+
+[data-tooltip]:after {
+  width: 1rem;
+  height: 1rem;
+  vertical-align: top;
+  content: "";
+  background-image: url("data:image/svg+xml;utf8,<svg width=\"24\" height=\"24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><g clip-path=\"url(%23a)\"><path d=\"M12 23c6.075 0 11-4.925 11-11S18.075 1 12 1 1 5.925 1 12s4.925 11 11 11ZM12 11v6\" stroke=\"%2322201C\" stroke-width=\"2\" stroke-miterlimit=\"10\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M12 8a1 1 0 1 0 0-2 1 1 0 0 0 0 2Z\" fill=\"%23000\"/></g><defs><clipPath id=\"a\"><path fill=\"none\" d=\"M0 0h24v24H0z\"/></clipPath></defs></svg>");
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: .2rem 0 0 .5rem;
+  font-size: .7rem;
+  font-weight: 400;
+  display: inline-block;
+}
+
+.salary-header {
+  text-align: center;
+  padding-bottom: 0;
+  font-weight: 700;
+}
+
+.salary-header__pretitle {
+  font-family: Roboto Slab;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.875rem;
+}
+
+.salary-header__title {
+  font-family: sans-serif;
+  font-size: 1rem;
+}
+
+.salary-header__company-logo {
+  width: 1.25rem;
+  height: auto;
+  margin-right: .25rem;
+}
+
+.salary-header__company-name {
+  justify-content: center;
+  align-items: center;
+  font-weight: 400;
+  display: flex;
+}
+
+.salary {
+  text-align: center;
+  background: #edf9e1;
+  border-radius: 8px;
+  margin-bottom: 2.5rem;
+  padding: 1.5rem 1.5rem 2rem;
+}
+
+@media only screen and (max-width: 959px) {
+  .salary {
+    padding-bottom: 1.75rem;
+  }
+}
+
+.salary__date {
+  color: #937e8a;
+  font-size: .875rem;
+  line-height: 1.1875rem;
+}
+
+.salary__salary {
+  margin: 0;
+  font-family: Roboto Slab;
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 2.75rem;
+}
+
+@media only screen and (max-width: 959px) {
+  .salary__salary {
+    font-size: 1.5rem;
+    line-height: 1.875rem;
+  }
+}
+
+*, :before, :after {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.img--stretch {
+  width: 100%;
+}
+
+
+
+</style>
+    <link rel="preconnect" href="https://font-api.kivra.com">
+    <link rel="preconnect" href="https://font-cdn.kivra.com">
+    <link href="https://font-api.kivra.com/css2?family=Kalam:wght@700&family=Roboto+Slab:wght@400;500;700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    
+    <header class="salary-header container">
+      <p class="salary-header__pretitle">Kalle Andersson</p>
+      <h1 class="salary-header__title">
+        Din lönespecifikation från
+        <span class="salary-header__company-name">
+          <img class="salary-header__company-logo" alt="" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTk3IiBoZWlnaHQ9IjIzOCIgdmlld0JveD0iMCAwIDE5NyAyMzgiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTI4LjYyNCAxMDYuNVYxNTlsODQuNSAzMFY5NC41TDY1LjYyNCA4MmwtMzcgMjQuNVoiIGZpbGw9IiNCN0I3QjciLz48cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0ibTY1LjM1NiA4MC4zNzggNDkuMjY4IDEyLjk2NnY5Ny43OGwtODcuNS0zMS4wNjV2LTU0LjM2NWwzOC4yMzItMjUuMzE2Wm0uNTM2IDMuMjQ0LTM1Ljc2OCAyMy42ODR2NTAuNjM1bDgxLjUgMjguOTM1di05MS4yMkw2NS44OTIgODMuNjIyWiIgZmlsbD0iIzAwMCIvPjxwYXRoIGQ9Ik02NS42MjQgODJ2OTBsNDcuNSAxN1Y5NC41TDY1LjYyNCA4MloiIGZpbGw9IiNmZmYiLz48cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0ibTY0LjEyNCA4MC4wNTQgNTAuNSAxMy4yOXY5Ny43ODZsLTUwLjUtMTguMDc0VjgwLjA1NFptMyAzLjg5MnY4Ni45OThsNDQuNSAxNS45MjZWOTUuNjU2bC00NC41LTExLjcxWiIgZmlsbD0iIzAwMCIvPjxwYXRoIGQ9Ik03OC4xMjQgNTZ2MzBsMjMuNSA0M2g1NS41VjIxTDExMi41IDIuNWwtMjAuMzc2IDEwVjU2aC0xNFoiIGZpbGw9IiM4REJENDMiLz48cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0ibTExMi40NDguODU0IDQ2LjE3NiAxOS4xNDRWMTMwLjVoLTU3Ljg5bC0yNC4xMS00NC4xMTdWNTQuNWgxNFYxMS41NjVMMTEyLjQ0OC44NTVabS4xMDQgMy4yOTEtMTguOTI4IDkuMjlWNTcuNWgtMTR2MjguMTE3bDIyLjg5IDQxLjg4M2g1My4xMVYyMi4wMDJMMTEyLjU1MiA0LjE0NVoiIGZpbGw9IiMwMDAiLz48cGF0aCBkPSJNMTEzLjEyNCAzdjEyNmg0NFYyMWwtNDQtMThaIiBmaWxsPSIjZmZmIi8+PHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Im0xMTEuNjI0Ljc2NiA0NyAxOS4yMjdWMTMwLjVoLTQ3Vi43NjZabTMgNC40NjhWMTI3LjVoNDFWMjIuMDA3bC00MS0xNi43NzNaIiBmaWxsPSIjMDAwIi8+PHBhdGggZD0iTTg1LjYyNCAxMjcuNTI0VjE3OWw4Ni41IDQxLjV2LTk1LjIzTDEyOC42MTggMTE0bC00Mi45OTQgMTMuNTI0WiIgZmlsbD0iI0I3QjdCNyIvPjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJtMTI4LjU3OCAxMTIuNDQgNDUuMDQ2IDExLjY2OXY5OC43NzRsLTg5LjUtNDIuOTM5di01My41MjFsNDQuNDU0LTEzLjk4M1ptLjA4IDMuMTItNDEuNTM0IDEzLjA2NHY0OS40MzJsODMuNSA0MC4wNnYtOTEuNjg1bC00MS45NjYtMTAuODcxWiIgZmlsbD0iIzAwMCIvPjxwYXRoIGQ9Ik0xMjguNjE4IDExNHY4NS41bDQzLjUwNiAyMXYtOTUuMjNMMTI4LjYxOCAxMTRaIiBmaWxsPSIjZmZmIi8+PHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Im0xMjcuMTE4IDExMi4wNjIgNDYuNTA2IDEyLjA0N3Y5OC43OGwtNDYuNTA2LTIyLjQ0OHYtODguMzc5Wm0zIDMuODc2djgyLjYybDQwLjUwNiAxOS41NTJ2LTkxLjY3OWwtNDAuNTA2LTEwLjQ5M1oiIGZpbGw9IiMwMDAiLz48cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTIuNTAzIDE1NS43ODRhMS41IDEuNSAwIDAgMSAxLjU4Ny0xLjQwOGM5LjkzNi41OTYgMzEuMTcyIDUuMTY3IDYyLjg1NCAxNi44MjQgMzEuNzIgMTEuNjcyIDczLjk5NiAzMC40NzkgMTI2LjAzNyA1OS42MTdhMS41IDEuNSAwIDAgMS0xLjQ2NSAyLjYxOGMtNTEuOTItMjkuMDctOTQuMDUzLTQ3LjgwOC0xMjUuNjA4LTU5LjQxOS0zMS41OTQtMTEuNjI1LTUyLjUwMi0xNi4wNzYtNjEuOTk4LTE2LjY0NWExLjUgMS41IDAgMCAxLTEuNDA3LTEuNTg3WiIgZmlsbD0iIzAwMCIvPjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMS41MDQgMTU1LjcyNGEyLjUgMi41IDAgMCAxIDIuNjQ1LTIuMzQ2YzEwLjA4NC42MDQgMzEuNDI4IDUuMjE1IDYzLjE0IDE2Ljg4NCAzMS43NzUgMTEuNjkyIDc0LjA5OSAzMC41MjIgMTI2LjE4MSA1OS42ODNhMi41IDIuNSAwIDEgMS0yLjQ0MyA0LjM2MmMtNTEuODc5LTI5LjA0Ny05My45NjQtNDcuNzYyLTEyNS40NjUtNTkuMzUzQzMzLjk5OCAxNjMuMzQgMTMuMiAxNTguOTI5IDMuODUgMTU4LjM2OWEyLjUgMi41IDAgMCAxLTIuMzQ2LTIuNjQ1Wm0yLjUyNi0uMzQ5YS41LjUgMCAxIDAtLjA2Ljk5OGM5LjY0My41NzcgMzAuNjYgNS4wNjggNjIuMjgzIDE2LjcwNCAzMS42MSAxMS42MzIgNzMuNzkxIDMwLjM5MiAxMjUuNzUxIDU5LjQ4NWEuNS41IDAgMCAwIC40ODktLjg3MmMtNTIuMDAxLTI5LjExNi05NC4yMy00Ny45LTEyNS44OTUtNTkuNTUxLTMxLjY1Mi0xMS42NDctNTIuNzc5LTE2LjE3OC02Mi41NjgtMTYuNzY0WiIgZmlsbD0iIzAwMCIvPjwvc3ZnPg==">
+          Business Inc.
+        </span>
+      </h1>
+    </header>
+    <main>
+      <div class="container">
+        <div class="salary">
+          <p class="salary__date">25 april, 2022</p>
+          <p class="salary__salary">20 500 kr</p>
+        </div>
+
+        <div class="grid-row">
+          <div class="grid-col-6 grid-col-s-12">
+            <table class="table">
+              <thead>
+                <tr class="table-row">
+                  <td colspan="2" class="table-cell table-cell__highlight">Händelser</td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="table-row">
+                  <td class="table-cell">Månadslön tjänstemän</td>
+                  <td class="table-cell table-cell__last table-cell__highlight">
+                    31 500,00
+                  </td>
+                </tr>
+                <tr class="table-row">
+                  <td colspan="2" class="table-cell">
+                    *Karenstillfälle
+                    <div class="table-cell__subtle">0314-0314. 1,00</div>
+                  </td>
+                </tr>
+                <tr class="table-row">
+                  <td class="table-cell">
+                    Sjuklön 80 % t o m dag 14 Tjm
+                    <div class="table-cell__subtle">0314-0325,144,23*80</div>
+                  </td>
+                  <td class="table-cell table-cell__last table-cell__highlight">11 000,00</td>
+                </tr>
+                <tr class="table-row">
+                  <td class="table-cell">
+                    Sjukavdrag tom dag 14 Tjm
+                    <div class="table-cell__subtle">0314-0325, 144,23*80</div>
+                  </td>
+                  <td class="table-cell table-cell__last table-cell__highlight">-15 000,00</td>
+                </tr>
+                <tr class="table-row">
+                  <td class="table-cell">
+                    Prel skatt tabell (27211,36)
+                  </td>
+                  <td class="table-cell table-cell__last table-cell__highlight">-7 000,00</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="grid-col-6 grid-col-s-12">
+            <table class="table">
+              <thead>
+                <tr class="table-row">
+                  <td colspan="2" class="table-cell table-cell__highlight">Saldo</td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="table-row">
+                  <td class="table-cell">Betald semester</td>
+                  <td class="table-cell table-cell__last table-cell__highlight">
+                    20,00
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <a class="link link--external" href="https://example.com" rel="noreferrer noopener">Läs mer</a>
+      </div>
+    </main>
+  
+    <footer class="footer">
+  <div class="container">
+    <div class="footer__inner">
+      <h2>Kontakta oss</h2>
+
+      <h4>Telefon</h4>
+      <p><a href="tel:0771950950">0771-950 950</a></p>
+
+      <h4>Öppettider</h4>
+      <p>Varje dag, 9.00-18.00</p>
+
+      <a class="footer__logo" href="https://example.com" rel="noreferrer noopener">
+        <img alt="Company logo" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTk3IiBoZWlnaHQ9IjIzOCIgdmlld0JveD0iMCAwIDE5NyAyMzgiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTI4LjYyNCAxMDYuNVYxNTlsODQuNSAzMFY5NC41TDY1LjYyNCA4MmwtMzcgMjQuNVoiIGZpbGw9IiNCN0I3QjciLz48cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0ibTY1LjM1NiA4MC4zNzggNDkuMjY4IDEyLjk2NnY5Ny43OGwtODcuNS0zMS4wNjV2LTU0LjM2NWwzOC4yMzItMjUuMzE2Wm0uNTM2IDMuMjQ0LTM1Ljc2OCAyMy42ODR2NTAuNjM1bDgxLjUgMjguOTM1di05MS4yMkw2NS44OTIgODMuNjIyWiIgZmlsbD0iIzAwMCIvPjxwYXRoIGQ9Ik02NS42MjQgODJ2OTBsNDcuNSAxN1Y5NC41TDY1LjYyNCA4MloiIGZpbGw9IiNmZmYiLz48cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0ibTY0LjEyNCA4MC4wNTQgNTAuNSAxMy4yOXY5Ny43ODZsLTUwLjUtMTguMDc0VjgwLjA1NFptMyAzLjg5MnY4Ni45OThsNDQuNSAxNS45MjZWOTUuNjU2bC00NC41LTExLjcxWiIgZmlsbD0iIzAwMCIvPjxwYXRoIGQ9Ik03OC4xMjQgNTZ2MzBsMjMuNSA0M2g1NS41VjIxTDExMi41IDIuNWwtMjAuMzc2IDEwVjU2aC0xNFoiIGZpbGw9IiM4REJENDMiLz48cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0ibTExMi40NDguODU0IDQ2LjE3NiAxOS4xNDRWMTMwLjVoLTU3Ljg5bC0yNC4xMS00NC4xMTdWNTQuNWgxNFYxMS41NjVMMTEyLjQ0OC44NTVabS4xMDQgMy4yOTEtMTguOTI4IDkuMjlWNTcuNWgtMTR2MjguMTE3bDIyLjg5IDQxLjg4M2g1My4xMVYyMi4wMDJMMTEyLjU1MiA0LjE0NVoiIGZpbGw9IiMwMDAiLz48cGF0aCBkPSJNMTEzLjEyNCAzdjEyNmg0NFYyMWwtNDQtMThaIiBmaWxsPSIjZmZmIi8+PHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Im0xMTEuNjI0Ljc2NiA0NyAxOS4yMjdWMTMwLjVoLTQ3Vi43NjZabTMgNC40NjhWMTI3LjVoNDFWMjIuMDA3bC00MS0xNi43NzNaIiBmaWxsPSIjMDAwIi8+PHBhdGggZD0iTTg1LjYyNCAxMjcuNTI0VjE3OWw4Ni41IDQxLjV2LTk1LjIzTDEyOC42MTggMTE0bC00Mi45OTQgMTMuNTI0WiIgZmlsbD0iI0I3QjdCNyIvPjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJtMTI4LjU3OCAxMTIuNDQgNDUuMDQ2IDExLjY2OXY5OC43NzRsLTg5LjUtNDIuOTM5di01My41MjFsNDQuNDU0LTEzLjk4M1ptLjA4IDMuMTItNDEuNTM0IDEzLjA2NHY0OS40MzJsODMuNSA0MC4wNnYtOTEuNjg1bC00MS45NjYtMTAuODcxWiIgZmlsbD0iIzAwMCIvPjxwYXRoIGQ9Ik0xMjguNjE4IDExNHY4NS41bDQzLjUwNiAyMXYtOTUuMjNMMTI4LjYxOCAxMTRaIiBmaWxsPSIjZmZmIi8+PHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Im0xMjcuMTE4IDExMi4wNjIgNDYuNTA2IDEyLjA0N3Y5OC43OGwtNDYuNTA2LTIyLjQ0OHYtODguMzc5Wm0zIDMuODc2djgyLjYybDQwLjUwNiAxOS41NTJ2LTkxLjY3OWwtNDAuNTA2LTEwLjQ5M1oiIGZpbGw9IiMwMDAiLz48cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTIuNTAzIDE1NS43ODRhMS41IDEuNSAwIDAgMSAxLjU4Ny0xLjQwOGM5LjkzNi41OTYgMzEuMTcyIDUuMTY3IDYyLjg1NCAxNi44MjQgMzEuNzIgMTEuNjcyIDczLjk5NiAzMC40NzkgMTI2LjAzNyA1OS42MTdhMS41IDEuNSAwIDAgMS0xLjQ2NSAyLjYxOGMtNTEuOTItMjkuMDctOTQuMDUzLTQ3LjgwOC0xMjUuNjA4LTU5LjQxOS0zMS41OTQtMTEuNjI1LTUyLjUwMi0xNi4wNzYtNjEuOTk4LTE2LjY0NWExLjUgMS41IDAgMCAxLTEuNDA3LTEuNTg3WiIgZmlsbD0iIzAwMCIvPjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMS41MDQgMTU1LjcyNGEyLjUgMi41IDAgMCAxIDIuNjQ1LTIuMzQ2YzEwLjA4NC42MDQgMzEuNDI4IDUuMjE1IDYzLjE0IDE2Ljg4NCAzMS43NzUgMTEuNjkyIDc0LjA5OSAzMC41MjIgMTI2LjE4MSA1OS42ODNhMi41IDIuNSAwIDEgMS0yLjQ0MyA0LjM2MmMtNTEuODc5LTI5LjA0Ny05My45NjQtNDcuNzYyLTEyNS40NjUtNTkuMzUzQzMzLjk5OCAxNjMuMzQgMTMuMiAxNTguOTI5IDMuODUgMTU4LjM2OWEyLjUgMi41IDAgMCAxLTIuMzQ2LTIuNjQ1Wm0yLjUyNi0uMzQ5YS41LjUgMCAxIDAtLjA2Ljk5OGM5LjY0My41NzcgMzAuNjYgNS4wNjggNjIuMjgzIDE2LjcwNCAzMS42MSAxMS42MzIgNzMuNzkxIDMwLjM5MiAxMjUuNzUxIDU5LjQ4NWEuNS41IDAgMCAwIC40ODktLjg3MmMtNTIuMDAxLTI5LjExNi05NC4yMy00Ny45LTEyNS44OTUtNTkuNTUxLTMxLjY1Mi0xMS42NDctNTIuNzc5LTE2LjE3OC02Mi41NjgtMTYuNzY0WiIgZmlsbD0iIzAwMCIvPjwvc3ZnPg==">
+      </a>
+    </div>
+  </div>
+</footer>
+  </body>
+</html>

@@ -1,0 +1,28 @@
+$font-family--base: sans-serif;
+$font-family--title: "Roboto Slab";
+$font-family--title--secondary: Kalam;
+
+$font-size--base: 16px;
+$font-size--base: 16px;
+
+$font-weight--regular: 400;
+$font-weight--semibold: 600;
+$font-weight--bold: 700;
+
+$color--background--primary: #fff;
+$color--background--tooltip: transparentize(#12100d, 0.15);
+$color--text--primary: #000;
+$color--text--tooltip: #fff;
+$color--text--subtle: #937e8a;
+$color--border--subtle: #eeebe8;
+$color--text--highlight: #3b0aaf;
+
+$border-radius--medium: 8px;
+$border-radius--small: 4px;
+
+$grid--gutter: 24px;
+
+$max-width: 1280px;
+
+$breakpoint--medium-and-below: "max-width: #{$max-width - 1}";
+$breakpoint--small-and-below: "max-width: 959px";

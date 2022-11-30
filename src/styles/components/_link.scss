@@ -1,0 +1,18 @@
+.link {
+  color: $color--text--highlight;
+  text-decoration: none;
+}
+
+.link--external {
+  font-weight: $font-weight--bold;
+
+  &:after {
+    background: svgUri('<svg width="16" height="16" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#a)" stroke="#{$color--text--highlight}" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"><path d="m15.5.5-8 8m1-8h7v7m-3 2v5a1 1 0 0 1-1 1h-10a1 1 0 0 1-1-1v-10a1 1 0 0 1 1-1h5"/></g><defs><clipPath id="a"><path fill="#fff" d="M0 0h16v16H0z"/></clipPath></defs></svg>');
+    display: inline-block;
+    vertical-align: top;
+    height: 1rem;
+    width: 1rem;
+    margin: 0.1rem 0 0 0.5rem;
+    content: '';
+  }
+}

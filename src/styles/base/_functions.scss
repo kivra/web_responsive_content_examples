@@ -1,0 +1,30 @@
+@use "sass:math";
+
+// https://css-tricks.com/snippets/sass/strip-unit-function/
+@function stripUnit($number) {
+  @if type-of($number) == "number" and not unitless($number) {
+    @return math.div($number, ($number * 0 + 1));
+  }
+
+  @return $number;
+}
+
+@function pxToRem($px) {
+  @return #{stripUnit(math.div($px, $font-size--base))}rem;
+}
+
+@function svgUri($svg) {
+  @return url('data:image/svg+xml;utf8,#{strReplace($svg, "#", "%23")}');
+}
+
+// https://css-tricks.com/snippets/sass/str-replace-function/
+@function strReplace($string, $search, $replace) {
+  $index: str-index($string, $search);
+  // @return str-slice($str, 1, $index - 1) + $replace + strReplace(str-slice($str, $index + str-length($search)), $str, $replace);
+  
+  @if $index {
+    @return str-slice($string, 1, $index - 1) + $replace + strReplace(str-slice($string, $index + str-length($search)), $search, $replace);
+  }
+  
+  @return $string;
+}

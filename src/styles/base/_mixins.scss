@@ -1,0 +1,17 @@
+@mixin medium {
+  @media only screen and ($breakpoint--medium-and-below) {
+    @content;
+  }
+}
+
+@mixin small {
+  @media only screen and ($breakpoint--small-and-below) {
+    @content;
+  }
+}
+
+@mixin svgBackground($svg) {
+  background-image: svgUri($svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
