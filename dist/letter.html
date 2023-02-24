@@ -1105,6 +1105,15 @@ tbody .table-cell {
   display: inline-block;
 }
 
+.expandable {
+  margin: 1rem 0;
+}
+
+.expandable .expandable__summary {
+  cursor: pointer;
+  font-weight: 600;
+}
+
 .salary-header {
   text-align: center;
   padding-bottom: 0;
@@ -1225,10 +1234,17 @@ a:hover {
               <h2>Standardutbud</h2>
             </div>
             <p>
-              Intuitiv. Otroligt kraftfull. Och utformad för att du ska kunna jobba och skapa på sätt du aldrig hade kunnat föreställa dig. Det är fyllt med appar som är redo att användas direkt. Regelbundna, kostnadsfria mjukvaruuppdateringar ser till att allt hålls uppdaterat och fungerar smidigt.
+              Intuitiv. Otroligt kraftfull. Och utformad för att du ska kunna jobba och skapa på sätt du aldrig hade kunnat föreställa dig. Det är fyllt med appar som är redo att användas direkt.
             </p>
+            <details class="expandable" open="">
+              <summary class="expandable__summary">
+                Mjukvaruuppdateringar (klicka för att visa/dölja)
+              </summary>
+              <p>
+                Regelbundna, kostnadsfria mjukvaruuppdateringar ser till att allt hålls uppdaterat och fungerar smidigt. Om du redan har en produkt sedan tidigare känns allt bekant så fort du börjar använda produkten.
+              </p>
+            </details>
             <p>
-              Om du redan har en produkt sedan tidigare känns allt bekant så fort du börjar använda produkten.
             </p>
           </div>
           <div class="grid-col--flex grid-col-4 grid-col-s-12">

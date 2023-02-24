@@ -1,0 +1,8 @@
+.expandable {
+  margin: 1rem 0;
+
+  .expandable__summary {
+    font-weight: $font-weight--semibold;
+    cursor: pointer;
+  }
+}
