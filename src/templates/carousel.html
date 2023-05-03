@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Carousel</title>
+
+    <style>
+      :root {
+        --dark-green: #003004;
+        --light-green: #75c62e;
+        --light-grey: #d3d3d3;
+        --dark-grey: #808080;
+      }
+    </style>
+
+    <style>
+      .carousel {
+        position: relative;
+        width: 100%;
+      }
+
+      .carousel .carousel-inner {
+        position: relative;
+        overflow: hidden;
+      }
+
+      .carousel .carousel-inner input.carousel-input {
+        display: none;
+      }
+
+      .carousel
+        .carousel-inner
+        input.carousel-input:checked
+        + .carousel-item-container
+        .carousel-item {
+        position: static;
+        opacity: 1;
+      }
+
+      .carousel .carousel-inner .carousel-item-container .carousel-item {
+        position: absolute;
+        opacity: 0;
+        -webkit-transition: opacity 0.4s ease-out;
+        transition: opacity 0.4s ease-out;
+      }
+
+      .carousel .carousel-inner .carousel-item .carousel-item-content {
+        margin: 0 70px 50px 70px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        min-height: 350px;
+      }
+
+      input.carousel-input:checked
+        + .carousel-item-container
+        .carousel-control {
+        display: block;
+      }
+
+      .carousel .carousel-inner .carousel-control {
+        position: absolute;
+        background-color: var(--light-grey);
+        border-radius: 50%;
+        color: #fff;
+        display: none;
+        font-size: 25px;
+        height: 40px;
+        line-height: 35px;
+        text-align: center;
+        width: 40px;
+        cursor: pointer;
+        -webkit-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+
+        /** Fixed position regardless of content height **/
+        top: 200px;
+
+        /** Relative position depending on content height **/
+        /* top: 50%;
+        -webkit-transform: translate(0, -50%);
+        -ms-transform: translate(0, -50%);
+        transform: translate(0, -50%); */
+      }
+
+      .carousel .carousel-inner .carousel-control:hover {
+        background-color: var(--dark-grey);
+      }
+
+      .carousel .carousel-inner .carousel-control.prev {
+        left: 2%;
+      }
+
+      .carousel .carousel-inner .carousel-control.prev:after {
+        content: "<";
+      }
+
+      .carousel .carousel-inner .carousel-control.next {
+        right: 2%;
+      }
+
+      .carousel .carousel-inner .carousel-control.next:after {
+        content: ">";
+      }
+
+      .carousel .carousel-inner .carousel-indicators {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        position: absolute;
+        bottom: 2%;
+        left: 0;
+        right: 0;
+        text-align: center;
+        -webkit-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      .carousel .carousel-inner .carousel-indicators li {
+        display: inline-block;
+      }
+
+      .carousel .carousel-inner .carousel-bullet {
+        background-color: var(--light-grey);
+        cursor: pointer;
+        display: block;
+        height: 10px;
+        width: 10px;
+        margin: 3px;
+        border-radius: 50%;
+      }
+
+      .carousel .carousel-inner .carousel-bullet:hover {
+        background-color: var(--dark-grey);
+      }
+
+      .carousel-input:nth-of-type(1):checked
+        ~ .carousel-indicators
+        li:nth-child(1)
+        .carousel-bullet,
+      .carousel-input:nth-of-type(2):checked
+        ~ .carousel-indicators
+        li:nth-child(2)
+        .carousel-bullet,
+      .carousel-input:nth-of-type(3):checked
+        ~ .carousel-indicators
+        li:nth-child(3)
+        .carousel-bullet,
+      .carousel-input:nth-of-type(4):checked
+        ~ .carousel-indicators
+        li:nth-child(4)
+        .carousel-bullet {
+        background-color: var(--light-green);
+      }
+    </style>
+
+    <style>
+      body {
+        margin: 0;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6,
+      p,
+      li {
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      main {
+        max-width: 700px;
+        margin: 0 auto;
+        padding: 10px;
+      }
+
+      header {
+        background-color: var(--dark-green);
+        color: var(--light-green);
+        padding: 30px;
+        -webkit-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      header div {
+        max-width: 700px;
+        margin: 0 auto;
+      }
+
+      header h1 {
+        margin: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div>
+        <h1>Carousel</h1>
+      </div>
+    </header>
+    <main>
+      <div class="carousel">
+        <div class="carousel-inner">
+          <input
+            class="carousel-input"
+            type="radio"
+            id="carousel-1"
+            name="carousel"
+            aria-hidden="true"
+            checked="checked"
+          />
+          <div class="carousel-item-container">
+            <label
+              for="carousel-3"
+              class="carousel-control prev"
+              tabindex="0"
+            ></label>
+            <label
+              for="carousel-2"
+              class="carousel-control next"
+              tabindex="0"
+            ></label>
+            <div class="carousel-item">
+              <div class="carousel-item-content">
+                <h1>Slide 1</h1>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                  laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+                  irure dolor in reprehenderit in voluptate velit esse cillum
+                  dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                  cupidatat non proident, sunt in culpa qui officia deserunt
+                  mollit anim id est laborum.
+                </p>
+                <p>
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                  laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+                  irure dolor in reprehenderit in voluptate velit esse cillum
+                  dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                  cupidatat non proident, sunt in culpa qui officia deserunt
+                  mollit anim id est laborum.
+                </p>
+              </div>
+            </div>
+          </div>
+          <input
+            class="carousel-input"
+            type="radio"
+            id="carousel-2"
+            name="carousel"
+            aria-hidden="true"
+          />
+          <div class="carousel-item-container">
+            <label
+              for="carousel-1"
+              class="carousel-control prev"
+              tabindex="0"
+            ></label>
+            <label
+              for="carousel-3"
+              class="carousel-control next"
+              tabindex="0"
+            ></label>
+            <div class="carousel-item">
+              <div class="carousel-item-content">
+                <h1>Slide 2</h1>
+                <p>
+                  Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+                  accusantium doloremque laudantium, totam rem aperiam, eaque
+                  ipsa quae ab illo inventore veritatis et quasi architecto
+                  beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem
+                  quia voluptas sit aspernatur aut odit aut fugit, sed quia
+                  consequuntur magni dolores eos qui ratione voluptatem sequi
+                  nesciunt. Neque porro quisquam est, qui dolorem ipsum quia
+                  dolor sit amet, consectetur, adipisci velit, sed quia non
+                  numquam eius modi tempora incidunt ut labore et dolore magnam
+                  aliquam quaerat voluptatem. Ut enim ad minima veniam, quis
+                  nostrum exercitationem ullam corporis suscipit laboriosam,
+                  nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum
+                  iure reprehenderit qui in ea voluptate velit esse quam nihil
+                  molestiae consequatur, vel illum qui dolorem eum fugiat quo
+                  voluptas nulla pariatur?
+                </p>
+              </div>
+            </div>
+          </div>
+          <input
+            class="carousel-input"
+            type="radio"
+            id="carousel-3"
+            name="carousel"
+            aria-hidden="true"
+          />
+          <div class="carousel-item-container">
+            <label
+              for="carousel-2"
+              class="carousel-control prev"
+              tabindex="0"
+            ></label>
+            <label
+              for="carousel-4"
+              class="carousel-control next"
+              tabindex="0"
+            ></label>
+            <div class="carousel-item">
+              <div class="carousel-item-content">
+                <h1>Slide 3</h1>
+                <p>
+                  At vero eos et accusamus et iusto odio dignissimos ducimus qui
+                  blanditiis praesentium voluptatum deleniti atque corrupti quos
+                  dolores et quas molestias excepturi sint occaecati cupiditate
+                  non provident, similique sunt in culpa qui officia deserunt
+                  mollitia animi, id est laborum et dolorum fuga. Et harum
+                  quidem rerum facilis est et expedita distinctio. Nam libero
+                  tempore, cum soluta nobis est eligendi optio cumque nihil
+                  impedit quo minus id quod maxime placeat facere possimus,
+                  omnis voluptas assumenda est, omnis dolor repellendus.
+                  Temporibus autem quibusdam et aut officiis debitis aut rerum
+                  necessitatibus saepe eveniet ut et voluptates repudiandae sint
+                  et molestiae non recusandae. Itaque earum rerum hic tenetur a
+                  sapiente delectus, ut aut reiciendis voluptatibus maiores
+                  alias consequatur aut perferendis doloribus asperiores
+                  repellat.
+                </p>
+              </div>
+            </div>
+          </div>
+          <input
+            class="carousel-input"
+            type="radio"
+            id="carousel-4"
+            name="carousel"
+            aria-hidden="true"
+          />
+          <div class="carousel-item-container">
+            <label
+              for="carousel-3"
+              class="carousel-control prev"
+              tabindex="0"
+            ></label>
+            <label
+              for="carousel-1"
+              class="carousel-control next"
+              tabindex="0"
+            ></label>
+            <div class="carousel-item">
+              <div class="carousel-item-content">
+                <h1>Slide 4</h1>
+                <p>
+                  At vero eos et accusamus et iusto odio dignissimos ducimus qui
+                  blanditiis praesentium voluptatum deleniti atque corrupti quos
+                  dolores et quas molestias excepturi sint occaecati cupiditate
+                  non provident, similique sunt in culpa qui officia deserunt
+                  mollitia animi, id est laborum et dolorum fuga.
+                </p>
+                <p>
+                  Et harum quidem rerum facilis est et expedita distinctio. Nam
+                  libero tempore, cum soluta nobis est eligendi optio cumque
+                  nihil impedit quo minus.
+                </p>
+                <p>
+                  Temporibus autem quibusdam et aut officiis debitis aut rerum
+                  necessitatibus saepe eveniet ut et voluptates repudiandae sint
+                  et molestiae non recusandae.
+                </p>
+              </div>
+            </div>
+          </div>
+          <ol class="carousel-indicators">
+            <li>
+              <label
+                for="carousel-1"
+                class="carousel-bullet"
+                tabindex="0"
+              ></label>
+            </li>
+            <li>
+              <label
+                for="carousel-2"
+                class="carousel-bullet"
+                tabindex="0"
+              ></label>
+            </li>
+            <li>
+              <label
+                for="carousel-3"
+                class="carousel-bullet"
+                tabindex="0"
+              ></label>
+            </li>
+            <li>
+              <label
+                for="carousel-4"
+                class="carousel-bullet"
+                tabindex="0"
+              ></label>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
