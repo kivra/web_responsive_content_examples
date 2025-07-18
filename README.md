@@ -1,6 +1,6 @@
 # web_responsive_content_examples
 
-Basic example templates of what you can accomplish when sending sending responsive content in Kivra.
+Basic example templates of what you can accomplish when sending responsive content in Kivra.
 
 This project is built using [Parcel](https://parceljs.org/), with the help of [PostHTML](https://parceljs.org/languages/html/#posthtml) and [SCSS](https://sass-lang.com/).
 When compiled, the output is static self-contained HTML files.
